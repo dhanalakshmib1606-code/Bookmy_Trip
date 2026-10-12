@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book hotels and discover travel deals with BookMyTrip.">
+  <title>BookMyTrip | Hotel Booking</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="BookMyTrip home">
+        bookmy<span class="logo-circle">trip<small>.com</small></span>
+      </a>
+
+      <div class="header-tools">
+        <div class="support">
+          <span>☎ Call 24/7 Support</span>
+          <a href="tel:+914412345678">+91 (44) 1234 5678</a>
+        </div>
+
+        <form class="header-search" id="headerSearch">
+          <input type="search" placeholder="Search entire website here..." aria-label="Search">
+          <button type="submit" aria-label="Search website">⌕</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+      <div class="nav-links" id="navLinks">
+        <a class="active" href="#booking">Hotels</a>
+        <a href="#popular">Flights</a>
+        <a href="#deals">Vacations</a>
+        <a href="#deals">Hot Deals</a>
+        <a href="#blogs">Travel Guides</a>
+        <a href="#blogs">Blogs</a>
+      </div>
+
+      <div class="nav-buttons">
+        <button type="button" class="yellow-btn" id="signupBtn">SIGN UP</button>
+        <button type="button" class="yellow-btn" id="accountBtn">MY ACCOUNT</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-info">
+        <h1>Paris Hilton Hotel, Mumbai, India</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Ut enim ad minim veniam.
+        </p>
+        <div class="hero-price">
+          <strong>$2200</strong>
+          <span>Inclusive of food, dinner</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking form -->
+  <section class="container booking-section" id="booking">
+    <div class="booking-box">
+      <h2 class="booking-title">Book Your Trip</h2>
+
+      <form class="booking-form" id="bookingForm">
+        <div class="field">
+          <label for="tripType">What?</label>
+          <select id="tripType" name="tripType">
+            <option value="Hotels">Hotels</option>
+            <option value="Flights">Flights</option>
+            <option value="Vacations">Vacations</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="location">Where?</label>
+          <select id="location" name="location" required>
+            <option value="">Location</option>
+            <option>Mumbai, India</option>
+            <option>Zurich, Switzerland</option>
+            <option>Melbourne, Australia</option>
+            <option>Paris, France</option>
+            <option>Dubai, UAE</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="checkin">When?</label>
+          <input type="date" id="checkin" name="checkin" required>
+        </div>
+
+        <div class="field">
+          <label>Who?</label>
+          <div class="guest-fields">
+            <select name="rooms" aria-label="Rooms">
+              <option value="1">1 Room</option>
+              <option value="2">2 Rooms</option>
+              <option value="3">3 Rooms</option>
+            </select>
+
+            <select name="adults" aria-label="Adults">
+              <option value="1">1 Adult</option>
+              <option value="2" selected>2 Adults</option>
+              <option value="3">3 Adults</option>
+              <option value="4">4 Adults</option>
+            </select>
+
+            <select name="children" aria-label="Children">
+              <option value="0">0 Children</option>
+              <option value="1">1 Child</option>
+              <option value="2">2 Children</option>
+              <option value="3">3 Children</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="search-btn">SEARCH</button>
+      </form>
+      <p class="form-message" id="bookingMessage" role="status"></p>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <main class="main-content">
+    <div class="container">
+
+      <!-- Popular hotels -->
+      <section class="section" id="popular">
+        <div class="section-heading">
+          <h2>Popular Hotels</h2>
+          <div class="carousel-controls">
+            <button id="prevHotels" aria-label="Previous hotels">‹</button>
+            <button id="nextHotels" aria-label="Next hotels">›</button>
+          </div>
+        </div>
+
+        <div class="hotel-grid" id="hotelGrid">
+
+          <article class="hotel-card">
+            <img src="img/image_2.jpg"
+              alt="Luxury hotel resort" loading="lazy">
+            <div class="hotel-details">
+              <div>
+                <h3>Hotel Gateway Palace</h3>
+                <p>Mumbai, Maharashtra, India</p>
+              </div>
+              <span class="price">$ 2500</span>
+            </div>
+          </article>
+
+          <article class="hotel-card">
+            <img src="img/image_3.jpg"
+              alt="Mountain resort swimming pool" loading="lazy">
+            <div class="hotel-details">
+              <div>
+                <h3>Abibe Blanc</h3>
+                <p>Marina Beach, Chennai, India</p>
+              </div>
+              <span class="price">$ 2200</span>
+            </div>
+          </article>
+
+          <article class="hotel-card">
+            <img src="img/image_6.jpg"
+              alt="Hotel dining area" loading="lazy">
+            <div class="hotel-details">
+              <div>
+                <h3>Hotel Pablo</h3>
+                <p>Delhi, India</p>
+              </div>
+              <span class="price">$ 1200</span>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Hot deals -->
+      <section class="section" id="deals">
+        <div class="section-heading">
+          <h2>Hot Deals</h2>
+        </div>
+
+        <div class="deals-grid">
+          <article class="deal-card">
+            <img src="img/image_4.jpg"
+              alt="Paris and the Eiffel Tower" loading="lazy">
+            <span class="deal-ribbon">-35%</span>
+            <div class="deal-content">
+              <small>From $480</small>
+              <h3>PARIS STROM BREAKS</h3>
+              <p>CURATED FOR YOUR PERFECT GETAWAY.<br>
+                DISCOVER OUR EXCLUSIVE TRAVEL OFFERS.</p>
+            </div>
+          </article>
+
+          <article class="deal-card">
+            <img src="img/image_5.jpg"
+              alt="Tropical beach holiday" loading="lazy">
+            <span class="deal-ribbon">SPECIAL</span>
+            <div class="deal-content">
+              <small>Holiday Packages</small>
+              <h3>TROPICAL ISLAND ESCAPES</h3>
+              <p>DISCOVER BEAUTIFUL BEACHES AND<br>
+                UNFORGETTABLE HOLIDAY EXPERIENCES.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Blog -->
+      <section class="blog-strip" id="blogs">
+        <h2>Latest Blogs <span>❯</span></h2>
+        <a href="#popular">Best places to visit in India</a>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-column">
+          <h3>Company</h3>
+          <a href="#about">About the company</a>
+          <a href="#terms">Terms and Conditions</a>
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#careers">Career</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Customer Support</h3>
+          <a href="mailto:support@example.com">Contact</a>
+          <a href="#faq">FAQ</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Follow us</h3>
+          <div class="social-links">
+            <a href="https://facebook.com" aria-label="Facebook">f</a>
+            <a href="https://x.com" aria-label="X">𝕏</a>
+            <a href="https://linkedin.com" aria-label="LinkedIn">in</a>
+            <a href="https://youtube.com" aria-label="YouTube">▶</a>
+            <a href="https://instagram.com" aria-label="Instagram">◎</a>
+          </div>
+        </div>
+
+        <div class="footer-column newsletter">
+          <h3>Don't miss our deals and offers</h3>
+          <p>Enter your email to receive travel deals.</p>
+          <form class="subscribe-form" id="subscribeForm">
+            <input type="email" placeholder="Enter your email id"
+              aria-label="Email address" required>
+            <button type="submit">SUBSCRIBE</button>
+          </form>
+          <p id="subscribeMessage" role="status"></p>
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        Copyright © 2026 BookMyTrip. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
